@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security | Ayush Kumar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:radial-gradient(circle at top,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav h2{
+    color:#00e5ff;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    perspective:1000px;
+}
+
+.hero-box{
+    background:rgba(255,255,255,0.12);
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.4);
+    transform-style:preserve-3d;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px) rotateX(0deg);}
+    50%{transform:translateY(-20px) rotateX(5deg);}
+    100%{transform:translateY(0px) rotateX(0deg);}
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero span{
+    color:#00e5ff;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:1.2rem;
+}
+
+.hero button{
+    padding:12px 28px;
+    border:none;
+    background:#00e5ff;
+    color:#000;
+    font-size:1rem;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.hero button:hover{
+    background:white;
+}
+
+/* SECTIONS */
+section{
+    padding:70px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#00e5ff;
+}
+
+/* 3D CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    transform-style:preserve-3d;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+.card i{
+    font-size:45px;
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+/* ABOUT */
+.about{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    padding:20px;
+    text-align:center;
+    margin-top:40px;
+    font-size:0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    .hero h1{font-size:2.2rem;}
+    .hero-box{padding:30px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2><i class="fas fa-shield-halved"></i> CyberSafe</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#threats">Threats</a>
+        <a href="#safety">Safety</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-box">
+        <h1>Cyber <span>Security</span></h1>
+        <p>Protecting Data • Securing Future</p>
+        <p><b>By Ayush Kumar (Class 7)</b></p>
+        <button onclick="alert('Welcome to Ayush Kumar’s Cyber Security Project 🌍')">
+            Explore
+        </button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>🔐 What is Cyber Security?</h2>
+    <div class="about">
+        <p>
+            Cyber Security is the protection of computers, mobile phones and data
+            from hackers, viruses and online threats. It helps us stay safe on the internet.
+        </p>
+    </div>
+</section>
+
+<!-- THREATS -->
+<section id="threats">
+    <h2>⚠️ Cyber Threats</h2>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-virus"></i>
+            <h3>Virus</h3>
+            <p>Damages files and slows devices.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Phishing</h3>
+            <p>Fake messages to steal data.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user-secret"></i>
+            <h3>Hacking</h3>
+            <p>Illegal access to accounts.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SAFETY -->
+<section id="safety">
+    <h2>🛡️ Cyber Safety Tips</h2>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-key"></i>
+            <p>Use strong passwords</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-link-slash"></i>
+            <p>Avoid unknown links</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-shield-virus"></i>
+            <p>Install antivirus software</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Cyber Security Project | Created by Ayush Kumar (Class 7)</p>
+</footer>
+
+</body>
+</html>
